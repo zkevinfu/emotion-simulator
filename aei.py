@@ -5,13 +5,14 @@ import states_obj
 
 class aei:
     #class variables
-    states_file = 'states.json'
+    states_file = 'resources/states.json'
+    aei_save_path = 'aei_saves'
     with open(states_file, 'r') as f:
         state_dict = json.load(f)
     # constructor:
     def __init__(self, name):
         self.name = name
-        self.save_file = '%s.json'%(name)
+        self.save_file = '%s/%s.json'%(self.aei_save_path,name)
         # if a previous aei save does not exist under this name, create new profile
         if not os.path.exists(self.save_file):
             self.last_update = datetime.datetime.now()
