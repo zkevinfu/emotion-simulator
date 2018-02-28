@@ -1,0 +1,18 @@
+[
+  {
+    "name": "tired",
+    "type": "physical",
+    "modifiers": {
+      "anger_m": 2,
+      "sadness_m": 1.5,
+      "joy_m:": 0.5
+    }
+  },
+  {
+    "name": "happy",
+    "type": "emotional",
+    "modifiers": {
+      "joy_m":2
+    }
+  }
+]
