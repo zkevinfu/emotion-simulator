@@ -5,29 +5,29 @@ Which is also a fancy name for a bot that can *feel*
 
 AEI is created using an 8 dimensional Plutchik Emotion Wheel
 Dimensions are :
-1. fear
-2. anger
-3. sadness
-4. joy
-5. disgust
-6. surprise
-7. trust
-8. anticipation
+1) fear
+2) anger
+3) sadness
+4) joy
+5) disgust
+6) surprise
+7) trust
+8) anticipation
 
 **Currently Features**
-* A modifiers value determines what degree any given stimuli affects AEI emotion levels
-* States are hard coded objects with a modifier modifying value
+A modifiers value determines what degree any given stimuli affects AEI emotion levels
+States are hard coded objects with a modifier modifying value
 
 **--DONE?--**
-* Pretty sure the actual AEI class is coming along
-* I think the state class is also good?
-* Theres a command line for handling input, which is nice
+Pretty sure the actual AEI class is coming along
+I think the state class is also good?
+Theres a command line for handling input, which is nice
 
 **--TODO--**
-* Add stimuli processing capabilities
-* Add a GUI
-* Figure out what stimuli are worth working with
+Add stimuli processing capabilities
+Add a GUI
+Figure out what stimuli are worth working with
 
 **--FUTURE--**
-* Machine learning for calculating modifier values?
-* Neural Nets for processing stimuli into consumable data?
+Machine learning for calculating modifier values?
+Neural Nets for processing stimuli into consumable data?
