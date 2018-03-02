@@ -1,5 +1,5 @@
-[
-  {
+{
+  "happy": {
     "name": "happy",
     "type": "emotional",
     "modifiers": {
@@ -13,7 +13,7 @@
       "anticipation_m": 0.5
     }
   },
-  {
+  "scared": {
     "name": "scared",
     "type": "emotional",
     "modifiers": {
@@ -27,7 +27,7 @@
       "anticipation_m": 1
     }
   },
-  {
+  "sad": {
     "name": "sad",
     "type": "emotional",
     "modifiers": {
@@ -41,7 +41,7 @@
       "anticipation_m": 0
     }
   },
-  {
+  "surprised": {
     "name": "surprised",
     "type": "emotional",
     "modifiers": {
@@ -55,7 +55,7 @@
       "anticipation_m": 0.5
     }
   },
-  {
+  "disgused": {
     "name": "disgusted",
     "type": "emotional",
     "modifiers": {
@@ -69,7 +69,7 @@
       "anticipation_m": 0
     }
   },
-  {
+  "annoyed": {
     "name": "annoyed",
     "type": "emotional",
     "modifiers": {
@@ -83,7 +83,7 @@
       "anticipation_m": 0.2
     }
   },
-  {
+  "tired": {
     "name": "tired",
     "type": "physical",
     "modifiers": {
@@ -97,7 +97,7 @@
       "anticipation_m": 0
     }
   },
-  {
+  "hungry": {
     "name": "hungry",
     "type": "physical",
     "modifiers": {
@@ -111,7 +111,7 @@
       "anticipation_m": 0
     }
   },
-  {
+  "pain": {
     "name": "pain",
     "type": "physical",
     "modifiers": {
@@ -125,7 +125,7 @@
       "anticipation_m": 1
     }
   },
-  {
+  "sick": {
     "name": "sick",
     "type": "physical",
     "modifiers": {
@@ -139,4 +139,4 @@
       "anticipation_m": 0.5
     }
   }
-]
+}

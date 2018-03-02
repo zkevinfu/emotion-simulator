@@ -43,14 +43,14 @@ class aei:
                 'anticipation_m': 1
             }
             # default states set initialized with values from state_dict
-            self.states = set()
+            self.states = {}
             for state in self.state_dict:
-                s = states_obj.states_obj(
-                    state['name'],
-                    state['modifiers'],
-                    state['type']
+                state_value = self.state_dict[state]
+                self.states[state] = states_obj.states_obj( # s[state] sets a dictionaty item with a key of state
+                    state_value['name'],
+                    state_value['modifiers'],
+                    state_value['type']
                 )
-                self.states.add(s)
             with open(self.save_file, 'w') as f:
                 self_data = json.dumps(self, default = self.jdefault, indent = 2)
         # If a previous save does exist, load data from file
@@ -77,10 +77,12 @@ class aei:
             f.write(self_data)
     # Method for modifying a state in an AEI obj
     def change_state(self, state, value):
-        if not state in self.state_dict:
-            return
-        # TODO: make this work
-
+        try:
+            self.states[state]['level'] += value
+            for modifier in self.e_mods:
+                self.e_mods[modifier] += self.states[state]['modifiers'][modifier]*value
+        except:
+            print "SOMETHING WENT WRONG CHANGING THE STATE"
     # Print accessor methods
     def print_emotions(self):
         print '---EMOTIONS---'

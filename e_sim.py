@@ -16,8 +16,11 @@ def cmd_thread(obj, q):
     q.put('EXIT')
 
 def main():
-    print 'Name of AEI?:',
-    name = raw_input()
+    if len(sys.argv) == 2:
+        name = sys.argv[1]
+    else:
+        print 'Name of AEI?:',
+        name = raw_input()
     obj = aei.aei(name)
     atexit.register(exit_handler, obj)
     crossq = Queue.Queue()
