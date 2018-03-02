@@ -5,14 +5,14 @@ Which is also a fancy name for a bot that can *feel*
 
 AEI is created using an 8 dimensional Plutchik Emotion Wheel
 Dimensions are :
-1) fear
-2) anger
-3) sadness
-4) joy
-5) disgust
-6) surprise
-7) trust
-8) anticipation
+1. fear <br />
+2. anger
+3. sadness
+4. joy
+5. disgust
+6. surprise
+7. trust
+8. anticipation
 
 **Currently Features**
 A modifiers value determines what degree any given stimuli affects AEI emotion levels
