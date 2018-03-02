@@ -2,15 +2,14 @@ import cmd
 import aei
 
 class AEIcmd(cmd.Cmd, object):
+    #Constructor
     def __init__(self, args):
+        """Initailizes a AEIcmd object with the given AEI, then initiazes the rest from Cmd"""
         cmd.Cmd.__init__(self)
         self.obj = args
-    #def run(self):
-    #    self.prompt = '> '
-    #    self.cmdloop('Starting prompt...')
-
     def do_print(self, args):
-        """TODO"""
+        """Prints out AEI information. Prints all on empty call. Availible commands:
+        ['emotions', 'states', 'modifiers']"""
         if len(args) == 0:
             self.obj.print_info()
         else:
@@ -19,7 +18,7 @@ class AEIcmd(cmd.Cmd, object):
                 self.obj.print_emotions()
             elif command == 'states':
                 self.obj.print_states()
-            elif command == 'e_mods':
+            elif command == 'modifiers':
                 self.obj.print_e_mods()
             else:
                 print 'Invalid Arg'
