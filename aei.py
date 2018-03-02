@@ -71,7 +71,11 @@ class aei:
         with open(self.save_file, 'w') as f:
             self_data = json.dumps(self, default = self.jdefault, indent = 2)
             f.write(self_data)
-
+    # method for modifying a state in an AEI obj
+    def change_state(self, state, value):
+        if not state in self.state_dict:
+            return
+        # TODO: make this work
     #print accessor methods
     def print_emotions(self):
         for e in self.emotions.items():
@@ -80,9 +84,12 @@ class aei:
         for e in self.e_mods.items():
             print e
     def print_states(self):
-        for e in self.states.items():
+        for e in self.states:
             print e
     def print_info(self):
+        print '---EMOTIONS---'
         self.print_emotions()
+        print '---MODIFIERS---'
         self.print_e_mods()
+        print '---STATES---'
         self.print_states()

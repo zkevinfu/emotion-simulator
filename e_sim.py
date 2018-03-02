@@ -1,45 +1,38 @@
 import aei
+import Queue
 import sys
 import os
+import AEIcmd
 import atexit
+import threading
 
 def exit_handler(obj):
-    print 'Closing Program'
+    print 'Finish Exit-'
     obj.update_save()
 #e_values = ast.literal_eval(f.readline())
-def proccess_stimuli(obj):
-    print 'Stimuli Type:',
-    stim_type = raw_input()
-
-def print_info(obj):
-    print 'Print Info:',
-    info = raw_input()
-    if info == 'emotions':
-        obj.print_emotions()
-    elif info == 'states':
-        obj.print_states()
-    elif info == 'e_mods':
-        obj.print_e_mods()
-    elif info == 'info':
-        obj.print_info()
-
-def proccess_input(S, obj):
-    if S == 'exit':
-        sys.exit()
-    elif S == 'print':
-        print_info(obj)
-    elif S == 'stimuli':
-        proccess_stimuli(obj)
-
+def cmd_thread(obj, q):
+    prompt = AEIcmd.AEIcmd(obj)
+    prompt.prompt = '> '
+    prompt.cmdloop('Starting prompt...')
+    q.put('EXIT')
 
 def main():
     print 'Name of AEI?:',
     name = raw_input()
     obj = aei.aei(name)
     atexit.register(exit_handler, obj)
-    while True:
-        print 'Input:',
-        proccess_input(raw_input(), obj)
+    crossq = Queue.Queue()
+    in_thread = threading.Thread(target = cmd_thread, args = (obj, crossq,))
+    #in_thread.start()
+    cmd_thread(obj, crossq)
+    running = True
+    while running:
+        if crossq:
+            item = crossq.get()
+            if item == 'EXIT':
+                running = False
+    in_thread.join()
+    sys.exit()
 
 if __name__ == "__main__":
     main()

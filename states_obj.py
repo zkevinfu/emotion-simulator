@@ -10,8 +10,5 @@ class states_obj:
     def jdefault(self, o):
         return o.__dict__
 
-    def print_info(self):
-        print self.name
-        print self.mod_d
-        print self.state_type
-        print self.level
+    def __str__(self):
+        return 'Name: %s\nType: %s\nModifiers: %s\nLevel: %s'%(self.name, self.type, self.modifiers, self.level)
