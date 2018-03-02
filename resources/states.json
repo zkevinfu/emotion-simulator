@@ -1,18 +1,142 @@
 [
   {
-    "name": "tired",
-    "type": "physical",
-    "modifiers": {
-      "anger_m": 2,
-      "sadness_m": 1.5,
-      "joy_m:": 0.5
-    }
-  },
-  {
     "name": "happy",
     "type": "emotional",
     "modifiers": {
-      "joy_m":2
+      "fear_m": -0.7,
+      "anger_m": -0.5,
+      "sadness_m": -0.5,
+      "joy_m": 1,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 1,
+      "anticipation_m": 0.5
+    }
+  },
+  {
+    "name": "scared",
+    "type": "emotional",
+    "modifiers": {
+      "fear_m": 1,
+      "anger_m": -0.5,
+      "sadness_m": 0,
+      "joy_m": -0.5,
+      "disgust_m": 0,
+      "surprise_m": 1,
+      "trust_m": -1,
+      "anticipation_m": 1
+    }
+  },
+  {
+    "name": "sad",
+    "type": "emotional",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "surprised",
+    "type": "emotional",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "disgusted",
+    "type": "emotional",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "annoyed",
+    "type": "emotional",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "tired",
+    "type": "physical",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "hungry",
+    "type": "physical",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "pain",
+    "type": "physical",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
+    }
+  },
+  {
+    "name": "sick",
+    "type": "physical",
+    "modifiers": {
+      "fear_m": 0,
+      "anger_m": 0,
+      "sadness_m": 0,
+      "joy_m": 0,
+      "disgust_m": 0,
+      "surprise_m": 0,
+      "trust_m": 0,
+      "anticipation_m": 0
     }
   }
 ]

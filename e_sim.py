@@ -23,8 +23,7 @@ def main():
     atexit.register(exit_handler, obj)
     crossq = Queue.Queue()
     in_thread = threading.Thread(target = cmd_thread, args = (obj, crossq,))
-    #in_thread.start()
-    cmd_thread(obj, crossq)
+    in_thread.start()
     running = True
     while running:
         if crossq:

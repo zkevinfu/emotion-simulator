@@ -78,18 +78,18 @@ class aei:
         # TODO: make this work
     #print accessor methods
     def print_emotions(self):
+        print '---EMOTIONS---'
         for e in self.emotions.items():
             print e
     def print_e_mods(self):
+        print '---MODIFIERS---'
         for e in self.e_mods.items():
             print e
     def print_states(self):
+        print '---STATES---'
         for e in self.states:
             print e
     def print_info(self):
-        print '---EMOTIONS---'
         self.print_emotions()
-        print '---MODIFIERS---'
         self.print_e_mods()
-        print '---STATES---'
         self.print_states()
