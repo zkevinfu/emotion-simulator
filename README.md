@@ -1,10 +1,14 @@
 # AEI (Artificial Emotional Intelligence)
 
-Fancy name for an emotional response simulator
-Which is also a fancy name for a bot that can *feel*
+Fancy name for an emotional response simulator  
+Which is also a fancy name for a bot that can *feel* 
 
+**Currently Features**  
+A modifiers value determines what degree any given stimuli affects AEI emotion levels  
+States are hard coded objects with a modifier modifying value 
 AEI is created using an 8 dimensional Plutchik Emotion Wheel
-Dimensions are :  
+
+**Dimensions:**  
 1. fear  
 2. anger  
 3. sadness  
@@ -14,9 +18,7 @@ Dimensions are :
 7. trust  
 8. anticipation  
 
-**Currently Features**  
-A modifiers value determines what degree any given stimuli affects AEI emotion levels  
-States are hard coded objects with a modifier modifying value  
+ 
 
 **--DONE?--**  
 Pretty sure the actual AEI class is coming along  
