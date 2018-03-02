@@ -7,6 +7,12 @@ class AEIcmd(cmd.Cmd, object):
         """Initailizes a AEIcmd object with the given AEI, then initiazes the rest from Cmd"""
         cmd.Cmd.__init__(self)
         self.obj = args
+
+    def run(self):
+        """Runs the AEIcmd"""
+        self.prompt = '> '
+        self.cmdloop('Starting prompt...')
+
     def do_print(self, args):
         """Prints out AEI information. Prints all on empty call. Availible commands:
         ['emotions', 'states', 'modifiers']"""

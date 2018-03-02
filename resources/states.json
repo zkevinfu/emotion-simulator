@@ -32,9 +32,9 @@
     "type": "emotional",
     "modifiers": {
       "fear_m": 0,
-      "anger_m": 0,
-      "sadness_m": 0,
-      "joy_m": 0,
+      "anger_m": -0.5,
+      "sadness_m": 1,
+      "joy_m": -0.7,
       "disgust_m": 0,
       "surprise_m": 0,
       "trust_m": 0,
@@ -45,27 +45,27 @@
     "name": "surprised",
     "type": "emotional",
     "modifiers": {
-      "fear_m": 0,
+      "fear_m": 1,
       "anger_m": 0,
       "sadness_m": 0,
       "joy_m": 0,
       "disgust_m": 0,
-      "surprise_m": 0,
-      "trust_m": 0,
-      "anticipation_m": 0
+      "surprise_m": 1,
+      "trust_m": -0.2,
+      "anticipation_m": 0.5
     }
   },
   {
     "name": "disgusted",
     "type": "emotional",
     "modifiers": {
-      "fear_m": 0,
-      "anger_m": 0,
+      "fear_m": 0.5,
+      "anger_m": 0.5,
       "sadness_m": 0,
-      "joy_m": 0,
-      "disgust_m": 0,
-      "surprise_m": 0,
-      "trust_m": 0,
+      "joy_m": -1,
+      "disgust_m": 1,
+      "surprise_m": 0.5,
+      "trust_m": -1,
       "anticipation_m": 0
     }
   },
@@ -74,13 +74,13 @@
     "type": "emotional",
     "modifiers": {
       "fear_m": 0,
-      "anger_m": 0,
+      "anger_m": 0.5,
       "sadness_m": 0,
-      "joy_m": 0,
+      "joy_m": -0.5,
       "disgust_m": 0,
       "surprise_m": 0,
-      "trust_m": 0,
-      "anticipation_m": 0
+      "trust_m": -0.2,
+      "anticipation_m": 0.2
     }
   },
   {
@@ -88,12 +88,12 @@
     "type": "physical",
     "modifiers": {
       "fear_m": 0,
-      "anger_m": 0,
+      "anger_m": 0.2,
       "sadness_m": 0,
-      "joy_m": 0,
+      "joy_m": -1,
       "disgust_m": 0,
       "surprise_m": 0,
-      "trust_m": 0,
+      "trust_m": 0.2,
       "anticipation_m": 0
     }
   },
@@ -102,12 +102,12 @@
     "type": "physical",
     "modifiers": {
       "fear_m": 0,
-      "anger_m": 0,
+      "anger_m": 0.5,
       "sadness_m": 0,
-      "joy_m": 0,
+      "joy_m": -0.5,
       "disgust_m": 0,
       "surprise_m": 0,
-      "trust_m": 0,
+      "trust_m": 0.5,
       "anticipation_m": 0
     }
   },
@@ -115,28 +115,28 @@
     "name": "pain",
     "type": "physical",
     "modifiers": {
-      "fear_m": 0,
-      "anger_m": 0,
+      "fear_m": 0.2,
+      "anger_m": 0.5,
       "sadness_m": 0,
-      "joy_m": 0,
+      "joy_m": -1,
       "disgust_m": 0,
       "surprise_m": 0,
-      "trust_m": 0,
-      "anticipation_m": 0
+      "trust_m": -1,
+      "anticipation_m": 1
     }
   },
   {
     "name": "sick",
     "type": "physical",
     "modifiers": {
-      "fear_m": 0,
+      "fear_m": 0.2,
       "anger_m": 0,
-      "sadness_m": 0,
-      "joy_m": 0,
+      "sadness_m": 1,
+      "joy_m": -1,
       "disgust_m": 0,
       "surprise_m": 0,
       "trust_m": 0,
-      "anticipation_m": 0
+      "anticipation_m": 0.5
     }
   }
 ]

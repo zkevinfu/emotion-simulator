@@ -12,8 +12,7 @@ def exit_handler(obj):
 #e_values = ast.literal_eval(f.readline())
 def cmd_thread(obj, q):
     prompt = AEIcmd.AEIcmd(obj)
-    prompt.prompt = '> '
-    prompt.cmdloop('Starting prompt...')
+    prompt.run()
     q.put('EXIT')
 
 def main():
