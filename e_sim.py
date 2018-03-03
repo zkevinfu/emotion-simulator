@@ -26,6 +26,7 @@ def main():
     crossq = Queue.Queue()
     in_thread = threading.Thread(target = cmd_thread, args = (obj, crossq,))
     in_thread.start()
+    obj.consume_eval(('joy', 1))
     running = True
     while running:
         if crossq:

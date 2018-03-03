@@ -83,6 +83,11 @@ class aei:
                 self.e_mods[modifier] += self.states[state]['modifiers'][modifier]*value
         except:
             print "SOMETHING WENT WRONG CHANGING THE STATE"
+    # Takes a tuple and updates self.emotions with it
+    def consume_eval(self, e_tup):
+        emotion = e_tup[0]
+        e_val = e_tup[1]
+        self.emotions[emotion] += self.e_mods['%s_m'%emotion]*e_val
     # Print accessor methods
     def print_emotions(self):
         print '---EMOTIONS---'
