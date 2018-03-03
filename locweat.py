@@ -31,7 +31,7 @@ def get_stim():
     snow = ['snow']
 
     e_queue = Queue.Queue()
-    #TODO make this good
+    #TODO finish this
     if (any(weat == icon for icon in clear)):
         e_queue.put(('joy', 1))
     elif (any(weat == icon for icon in p_cloudy)):
@@ -42,12 +42,5 @@ def get_stim():
         e_queue.put(('sadness', 1.5))
     elif (any(weat == icon for icon in snow)):
         e_queue.put(('joy', 1))
-
-    if 40 <= temp <= 80
-        e_queue.put(('joy', 1))
-    elif temp < 40
-        e_queue.put(('sadness', 1.5))
-    elif temp > 80
-        e_queue.put(('anger', 1.5))
 
     return e_queue
