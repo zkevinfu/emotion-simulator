@@ -43,4 +43,10 @@ def get_stim():
     elif (any(weat == icon for icon in snow)):
         e_queue.put(('joy', 1))
 
+    if 40 <= temp <= 80:
+        e_queue.put(('joy', 1))
+    elif temp < 40:
+        e_queue.put(('sadness', 1.5))
+    elif temp > 80:
+        e_queue.put(('anger', 1.5))
     return e_queue

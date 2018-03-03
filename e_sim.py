@@ -30,7 +30,6 @@ def main():
 
     obj = aei.aei(name)
     atexit.register(exit_handler, obj)
-    command_q = Queue.Queue()
     data_q = Queue.Queue()
 
     in_thread = threading.Thread(target = cmd_thread, args = (obj,))

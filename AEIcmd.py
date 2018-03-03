@@ -4,7 +4,8 @@ import aei
 class AEIcmd(cmd.Cmd, object):
     #Constructor
     def __init__(self, args):
-        """Initailizes a AEIcmd object with the given AEI, then initiazes the rest from Cmd"""
+        """Initailizes a AEIcmd object with the given AEI,
+        then initiazes the rest from Cmd"""
         cmd.Cmd.__init__(self)
         self.obj = args
 
@@ -14,8 +15,8 @@ class AEIcmd(cmd.Cmd, object):
         self.cmdloop('Starting prompt...')
 
     def do_print(self, args):
-        """Prints out AEI information. Prints all on empty call. Availible commands:
-        ['emotions', 'states', 'modifiers']"""
+        """Prints out AEI information. Prints all on empty call.
+        Availible commands: ['emotions', 'states', 'modifiers']"""
         if len(args) == 0:
             self.obj.print_info()
         else:
