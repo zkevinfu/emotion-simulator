@@ -13,7 +13,15 @@ class AEIcmd(cmd.Cmd, object):
         """Runs the AEIcmd"""
         self.prompt = '> '
         self.cmdloop('Starting prompt...')
-
+    def do_consume(self, args):
+        """Consumes a emotion tuple.
+        Takes arguments in the form of 'emotion, value'"""
+        args = args.split(' ')
+        if len(args) == 2:
+            try:
+                obj.consume_eval(args)
+            except:
+                print 'Invalid Args'
     def do_print(self, args):
         """Prints out AEI information. Prints all on empty call.
         Availible commands: ['emotions', 'states', 'modifiers']"""

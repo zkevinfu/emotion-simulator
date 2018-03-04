@@ -88,6 +88,15 @@ class aei:
         emotion = e_tup[0]
         e_val = e_tup[1]
         self.emotions[emotion] += self.e_mods['%s_m'%emotion]*e_val
+        self.emotions[emotion] = round(self.emotions[emotion], 2)
+    #iterate through emotions and decay those > 0
+    def decay(self):
+        #TODO figure out what values i want to use
+        for key in self.emotions:
+            if self.emotions[key] > 0:
+                self.consume_eval((key, -0.01))
+                if self.emotions[key] < 0:
+                    self.emotions[key] = 0
     # Print accessor methods
     def print_emotions(self):
         print '---EMOTIONS---'

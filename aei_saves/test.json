@@ -3,7 +3,7 @@
   "save_file": "aei_saves/test.json", 
   "emotions": {
     "anticipation": 0, 
-    "joy": 5, 
+    "joy": 23.83, 
     "sadness": 0, 
     "disgust": 0, 
     "anger": 0, 
@@ -11,7 +11,7 @@
     "fear": 0, 
     "trust": 0
   }, 
-  "last_update": "2018-03-02 23:22:43.541713", 
+  "last_update": "2018-03-03 23:54:36.747917", 
   "states": {
     "pain": {
       "modifiers": {
