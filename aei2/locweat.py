@@ -1,5 +1,5 @@
 import requests
-import queue
+import Queue
 import json
 
 def get_loc():
@@ -30,7 +30,7 @@ def get_stim():
     rain = ['rain', 'sleet']
     snow = ['snow']
 
-    e_queue = queue.Queue()
+    e_queue = Queue.Queue()
     #TODO finish this
     if (any(weat == icon for icon in clear)):
         e_queue.put(('joy', 1))

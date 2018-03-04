@@ -1,5 +1,5 @@
 import aei
-import queue
+import Queue
 import sys
 import os
 import AEIcmd
@@ -7,10 +7,10 @@ import atexit
 import threading
 import locweat
 import time
-import tkinter
+import Tkinter
 
 def exit_handler(obj):
-    print('Finish Exit-')
+    print 'Finish Exit-'
     obj.update_save()
 
 def cmd_thread(obj,):
@@ -40,15 +40,15 @@ def main():
     if len(sys.argv) == 2:
         name = sys.argv[1]
     else:
-        print('Name of AEI?:', end=' ')
-        name = input()
+        print 'Name of AEI?:',
+        name = raw_input()
 
     global running
     running = True
 
     obj = aei.aei(name)
     atexit.register(exit_handler, obj)
-    data_q = queue.Queue()
+    data_q = Queue.Queue()
 
     in_thread = threading.Thread(target = cmd_thread, args = (obj,))
     w_thread = threading.Thread(target = weather_thread, args = (data_q,))

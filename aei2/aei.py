@@ -17,7 +17,7 @@ class aei:
         self.save_file = '%s/%s.json'%(self.aei_save_path,name)
         # If a previous aei save does not exist under this name, create new profile
         if not os.path.exists(self.save_file):
-            print('Creating new: %s'%(self.name))
+            print 'Creating new: %s'%(self.name)
             self.last_update = datetime.datetime.now()
             # Default empotions dict initialized with value 0
             # dict.fromkeys(['x','y'], default_value) also works
@@ -55,7 +55,7 @@ class aei:
                 self_data = json.dumps(self, default = self.jdefault, indent = 2)
         # If a previous save does exist, load data from file
         else:
-            print('Loading: %s'%(self.name))
+            print 'Loading: %s'%(self.name)
             with open(self.save_file, 'r') as f:
                 self_data = json.load(f)
                 self.last_update = self_data['last_update']
@@ -82,7 +82,7 @@ class aei:
             for modifier in self.e_mods:
                 self.e_mods[modifier] += self.states[state]['modifiers'][modifier]*value
         except:
-            print("SOMETHING WENT WRONG CHANGING THE STATE")
+            print "SOMETHING WENT WRONG CHANGING THE STATE"
     # Takes a tuple and updates self.emotions with it
     def consume_eval(self, e_tup):
         emotion = e_tup[0]
@@ -99,17 +99,17 @@ class aei:
                     self.emotions[key] = 0
     # Print accessor methods
     def print_emotions(self):
-        print('---EMOTIONS---')
-        for e in list(self.emotions.items()):
-            print(e)
+        print '---EMOTIONS---'
+        for e in self.emotions.items():
+            print e
     def print_e_mods(self):
-        print('---MODIFIERS---')
-        for e in list(self.e_mods.items()):
-            print(e)
+        print '---MODIFIERS---'
+        for e in self.e_mods.items():
+            print e
     def print_states(self):
-        print('---STATES---')
+        print '---STATES---'
         for e in self.states:
-            print(e)
+            print e
     def print_info(self):
         self.print_emotions()
         self.print_e_mods()

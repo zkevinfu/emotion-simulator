@@ -21,7 +21,7 @@ class AEIcmd(cmd.Cmd, object):
             try:
                 obj.consume_eval(args)
             except:
-                print('Invalid Args')
+                print 'Invalid Args'
     def do_print(self, args):
         """Prints out AEI information. Prints all on empty call.
         Availible commands: ['emotions', 'states', 'modifiers']"""
@@ -36,9 +36,9 @@ class AEIcmd(cmd.Cmd, object):
             elif command == 'modifiers':
                 self.obj.print_e_mods()
             else:
-                print('Invalid Arg')
+                print 'Invalid Arg'
 
     def do_exit(self, args):
         """Exits the program."""
-        print("Begin Exit-")
+        print "Begin Exit-"
         return True
