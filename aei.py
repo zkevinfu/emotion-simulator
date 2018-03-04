@@ -86,7 +86,7 @@ class aei:
     # Takes a tuple and updates self.emotions with it
     def consume_eval(self, e_tup):
         emotion = e_tup[0]
-        e_val = e_tup[1]
+        e_val = float(e_tup[1])
         self.emotions[emotion] += self.e_mods['%s_m'%emotion]*e_val
         self.emotions[emotion] = round(self.emotions[emotion], 2)
     #iterate through emotions and decay those > 0

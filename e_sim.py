@@ -7,7 +7,7 @@ import atexit
 import threading
 import locweat
 import time
-import tkinter
+import mttkinter as tkinter
 
 def exit_handler(obj):
     print('Finish Exit-')
@@ -21,20 +21,18 @@ def cmd_thread(obj):
     prompt.run()
     running = False
 
-def display_thread(obj):
-    global running
-    master = tkinter.Tk()
+def init_gui(obj, tk):
     for i, key in enumerate(obj.emotions):
-        tkinter.Label(master, text='%s: '%key).grid(row=i, sticky=tkinter.E)
-    while running:
-        for i, key in enumerate(obj.emotions):
-            tkinter.Label(master, text=obj.emotions[key]).grid(row=i, column = 1, sticky = tkinter.W)
-        try:
-            master.update_idletasks()
-            master.update()
-        except:
-            print ('tk closed')
-        time.sleep(0.1)
+        tkinter.Label(tk, text='%s: '%key).grid(row=i, sticky=tkinter.E)
+
+def update_gui(obj, tk):
+    for i, key in enumerate(obj.emotions):
+        tkinter.Label(tk, text=obj.emotions[key]).grid(row=i, column = 1, sticky = tkinter.W)
+    try:
+        tk.update_idletasks()
+        tk.update()
+    except:
+        print ('tk closed')
 
 def decay_thread(obj):
     global running
@@ -70,17 +68,21 @@ def main():
     in_thread = threading.Thread(target = cmd_thread, args = (obj,))
     w_thread = threading.Thread(target = weather_thread, args = (data_q,))
     dec_thread = threading.Thread(target = decay_thread, args = (obj,))
-    dis_thread = threading.Thread(target = display_thread, args = (obj,))
+
 
     in_thread.start()
     w_thread.start()
     dec_thread.start()
-    #dis_thread.start()
-    display_thread(obj)
+
+    master = tkinter.Tk()
+    init_gui(obj, master)
+
     while running:
+        update_gui(obj, master)
         if not data_q.empty():
             item = data_q.get()
             obj.consume_eval(item)
+        time.sleep(0.1)
     in_thread.join()
     sys.exit()
 

@@ -1,13 +1,13 @@
 {
   "name": "test",
   "save_file": "aei_saves/test.json",
-  "last_update": "2018-03-04 16:49:05.186086",
+  "last_update": "2018-03-04 17:12:50.778299",
   "emotions": {
     "anticipation": 0,
-    "joy": 27.12,
-    "sadness": 1.63,
+    "joy": 31.55,
+    "sadness": 6.06,
     "disgust": 0,
-    "anger": 0,
+    "anger": 0.0,
     "surprise": 0,
     "fear": 0,
     "trust": 0

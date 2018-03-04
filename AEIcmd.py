@@ -19,7 +19,7 @@ class AEIcmd(cmd.Cmd, object):
         args = args.split(' ')
         if len(args) == 2:
             try:
-                obj.consume_eval(args)
+                self.obj.consume_eval(args)
             except:
                 print('Invalid Args')
     def do_print(self, args):
