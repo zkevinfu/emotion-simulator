@@ -1,26 +1,26 @@
 {
   "name": "test",
   "save_file": "aei_saves/test.json",
-  "last_update": "2018-03-05 21:10:21.789847",
+  "last_update": "2018-03-05 21:14:14.912985",
   "emotions": {
     "fear": 0,
-    "anger": 0,
+    "anger": 1.7800000000000002,
     "sadness": 0,
-    "joy": 4.050000000000002,
+    "joy": 6.200000000000009,
     "disgust": 0,
     "surprise": 0,
     "trust": 0,
     "anticipation": 0
   },
   "e_mods": {
-    "fear_m": 1,
-    "anger_m": 1,
-    "sadness_m": 1,
-    "joy_m": 1,
-    "disgust_m": 1,
-    "surprise_m": 1,
-    "trust_m": 1,
-    "anticipation_m": 1
+    "fear_m": 2,
+    "anger_m": 2,
+    "sadness_m": 2,
+    "joy_m": 2,
+    "disgust_m": 2,
+    "surprise_m": 2,
+    "trust_m": 2,
+    "anticipation_m": 2
   },
   "states": {
     "happy": {
@@ -126,7 +126,7 @@
         "anticipation_m": 1
       },
       "type": "emotional",
-      "level": 4.5
+      "level": 5.5
     },
     "tired": {
       "name": "tired",

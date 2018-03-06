@@ -44,7 +44,7 @@ def decay_thread(obj):
 
 def bored_thread(obj):
     #TODO make this better?
-    obj.inc_bored(1)
+    obj.change_state('bored', 1)
     time.sleep(5)
 
 def weather_thread(data_q):

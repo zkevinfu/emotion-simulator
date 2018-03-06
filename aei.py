@@ -89,9 +89,6 @@ class aei:
         e_val = float(e_tup[1])
         self.emotions[emotion] += self.e_mods['%s_m'%emotion]*e_val
         self.emotions[emotion] = round(self.emotions[emotion], 2)
-    # Increases the level of 'bored' by val
-    def inc_bored(self, val):
-        self.states['bored']['level'] += val
     # Iterate through emotions and decay those > 0
     def decay(self, dec_val = 0.01):
         #TODO figure out what values i want to use
