@@ -83,6 +83,20 @@
       "anticipation_m": 0.2
     }
   },
+  "bored":{
+    "name": "bored",
+    "type": "emotional",
+    "modifiers": {
+      "fear_m": 1,
+      "anger_m": 1,
+      "sadness_m": 1,
+      "joy_m": 1,
+      "disgust_m": 1,
+      "surprise_m": 1,
+      "trust_m": 1,
+      "anticipation_m": 1
+    }
+  },
   "tired": {
     "name": "tired",
     "type": "physical",

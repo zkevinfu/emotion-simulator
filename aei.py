@@ -19,7 +19,7 @@ class aei:
         if not os.path.exists(self.save_file):
             print('Creating new: %s'%(self.name))
             self.last_update = datetime.datetime.now()
-            # Default empotions dict initialized with value 0
+            # Default emotions dict initialized with value 0
             # dict.fromkeys(['x','y'], default_value) also works
             self.emotions = {
                 'fear': 0,
@@ -89,12 +89,17 @@ class aei:
         e_val = float(e_tup[1])
         self.emotions[emotion] += self.e_mods['%s_m'%emotion]*e_val
         self.emotions[emotion] = round(self.emotions[emotion], 2)
-    #iterate through emotions and decay those > 0
-    def decay(self):
+    # Increases the level of 'bored' by val
+    def inc_bored(self, val):
+        self.states['bored']['level'] += val
+    # Iterate through emotions and decay those > 0
+    def decay(self, dec_val = 0.01):
         #TODO figure out what values i want to use
         for key in self.emotions:
             if self.emotions[key] > 0:
-                self.consume_eval((key, -0.01))
+                self.emotions[key] -= self.states['bored']['modifiers']['%s_m'%key]\
+                                    * dec_val\
+                                    * self.states['bored']['level']
                 if self.emotions[key] < 0:
                     self.emotions[key] = 0
     # Print accessor methods
@@ -109,7 +114,7 @@ class aei:
     def print_states(self):
         print('---STATES---')
         for e in self.states:
-            print(e)
+            print('%s: %i'%(e, self.states[e]['level']))
     def print_info(self):
         self.print_emotions()
         self.print_e_mods()

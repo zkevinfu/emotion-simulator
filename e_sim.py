@@ -7,7 +7,7 @@ import atexit
 import threading
 import locweat
 import time
-import mttkinter as tkinter
+import tkinter
 
 def exit_handler(obj):
     print('Finish Exit-')
@@ -27,7 +27,7 @@ def init_gui(obj, tk):
 
 def update_gui(obj, tk):
     for i, key in enumerate(obj.emotions):
-        tkinter.Label(tk, text=obj.emotions[key]).grid(row=i, column = 1, sticky = tkinter.W)
+        tkinter.Label(tk, text=round(obj.emotions[key], 2)).grid(row=i, column = 1, sticky = tkinter.W)
     try:
         tk.update_idletasks()
         tk.update()
@@ -41,6 +41,11 @@ def decay_thread(obj):
         if time.time() - last_time > 1:
             last_time = time.time()
             obj.decay()
+
+def bored_thread(obj):
+    #TODO make this better?
+    obj.inc_bored(1)
+    time.sleep(5)
 
 def weather_thread(data_q):
     global running
@@ -68,11 +73,12 @@ def main():
     in_thread = threading.Thread(target = cmd_thread, args = (obj,))
     w_thread = threading.Thread(target = weather_thread, args = (data_q,))
     dec_thread = threading.Thread(target = decay_thread, args = (obj,))
-
+    bore_thread = threading.Thread(target = bored_thread, args = (obj,))
 
     in_thread.start()
     w_thread.start()
     dec_thread.start()
+    bore_thread.start()
 
     master = tkinter.Tk()
     init_gui(obj, master)

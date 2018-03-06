@@ -1,176 +1,191 @@
 {
   "name": "test",
   "save_file": "aei_saves/test.json",
-  "last_update": "2018-03-04 17:12:50.778299",
+  "last_update": "2018-03-05 21:10:21.789847",
   "emotions": {
-    "anticipation": 0,
-    "joy": 31.55,
-    "sadness": 6.06,
-    "disgust": 0,
-    "anger": 0.0,
-    "surprise": 0,
     "fear": 0,
-    "trust": 0
+    "anger": 0,
+    "sadness": 0,
+    "joy": 4.050000000000002,
+    "disgust": 0,
+    "surprise": 0,
+    "trust": 0,
+    "anticipation": 0
   },
   "e_mods": {
+    "fear_m": 1,
+    "anger_m": 1,
+    "sadness_m": 1,
+    "joy_m": 1,
     "disgust_m": 1,
     "surprise_m": 1,
-    "sadness_m": 1,
     "trust_m": 1,
-    "joy_m": 1,
-    "anger_m": 1,
-    "anticipation_m": 1,
-    "fear_m": 1
+    "anticipation_m": 1
   },
   "states": {
-    "pain": {
+    "happy": {
+      "name": "happy",
       "modifiers": {
+        "fear_m": -0.7,
+        "anger_m": -0.5,
+        "sadness_m": -0.5,
+        "joy_m": 1,
         "disgust_m": 0,
         "surprise_m": 0,
-        "sadness_m": 0,
-        "trust_m": -1,
-        "joy_m": -1,
-        "anger_m": 0.5,
-        "anticipation_m": 1,
-        "fear_m": 0.2
+        "trust_m": 1,
+        "anticipation_m": 0.5
       },
-      "type": "physical",
-      "name": "pain",
-      "level": 0
-    },
-    "tired": {
-      "modifiers": {
-        "disgust_m": 0,
-        "surprise_m": 0,
-        "sadness_m": 0,
-        "trust_m": 0.2,
-        "joy_m": -1,
-        "anger_m": 0.2,
-        "anticipation_m": 0,
-        "fear_m": 0
-      },
-      "type": "physical",
-      "name": "tired",
+      "type": "emotional",
       "level": 0
     },
     "scared": {
+      "name": "scared",
       "modifiers": {
+        "fear_m": 1,
+        "anger_m": -0.5,
+        "sadness_m": 0,
+        "joy_m": -0.5,
         "disgust_m": 0,
         "surprise_m": 1,
-        "sadness_m": 0,
         "trust_m": -1,
-        "joy_m": -0.5,
-        "anger_m": -0.5,
-        "anticipation_m": 1,
-        "fear_m": 1
+        "anticipation_m": 1
       },
       "type": "emotional",
-      "name": "scared",
-      "level": 0
-    },
-    "disgused": {
-      "modifiers": {
-        "disgust_m": 1,
-        "surprise_m": 0.5,
-        "sadness_m": 0,
-        "trust_m": -1,
-        "joy_m": -1,
-        "anger_m": 0.5,
-        "anticipation_m": 0,
-        "fear_m": 0.5
-      },
-      "type": "emotional",
-      "name": "disgusted",
-      "level": 0
-    },
-    "hungry": {
-      "modifiers": {
-        "disgust_m": 0,
-        "surprise_m": 0,
-        "sadness_m": 0,
-        "trust_m": 0.5,
-        "joy_m": -0.5,
-        "anger_m": 0.5,
-        "anticipation_m": 0,
-        "fear_m": 0
-      },
-      "type": "physical",
-      "name": "hungry",
       "level": 0
     },
     "sad": {
-      "modifiers": {
-        "disgust_m": 0,
-        "surprise_m": 0,
-        "sadness_m": 1,
-        "trust_m": 0,
-        "joy_m": -0.7,
-        "anger_m": -0.5,
-        "anticipation_m": 0,
-        "fear_m": 0
-      },
-      "type": "emotional",
       "name": "sad",
-      "level": 0
-    },
-    "sick": {
       "modifiers": {
-        "disgust_m": 0,
-        "surprise_m": 0,
+        "fear_m": 0,
+        "anger_m": -0.5,
         "sadness_m": 1,
-        "trust_m": 0,
-        "joy_m": -1,
-        "anger_m": 0,
-        "anticipation_m": 0.5,
-        "fear_m": 0.2
-      },
-      "type": "physical",
-      "name": "sick",
-      "level": 0
-    },
-    "annoyed": {
-      "modifiers": {
+        "joy_m": -0.7,
         "disgust_m": 0,
         "surprise_m": 0,
-        "sadness_m": 0,
-        "trust_m": -0.2,
-        "joy_m": -0.5,
-        "anger_m": 0.5,
-        "anticipation_m": 0.2,
-        "fear_m": 0
+        "trust_m": 0,
+        "anticipation_m": 0
       },
       "type": "emotional",
-      "name": "annoyed",
       "level": 0
     },
     "surprised": {
+      "name": "surprised",
       "modifiers": {
+        "fear_m": 1,
+        "anger_m": 0,
+        "sadness_m": 0,
+        "joy_m": 0,
         "disgust_m": 0,
         "surprise_m": 1,
-        "sadness_m": 0,
         "trust_m": -0.2,
-        "joy_m": 0,
-        "anger_m": 0,
-        "anticipation_m": 0.5,
-        "fear_m": 1
+        "anticipation_m": 0.5
       },
       "type": "emotional",
-      "name": "surprised",
       "level": 0
     },
-    "happy": {
+    "disgused": {
+      "name": "disgusted",
       "modifiers": {
-        "disgust_m": 0,
-        "surprise_m": 0,
-        "sadness_m": -0.5,
-        "trust_m": 1,
-        "joy_m": 1,
-        "anger_m": -0.5,
-        "anticipation_m": 0.5,
-        "fear_m": -0.7
+        "fear_m": 0.5,
+        "anger_m": 0.5,
+        "sadness_m": 0,
+        "joy_m": -1,
+        "disgust_m": 1,
+        "surprise_m": 0.5,
+        "trust_m": -1,
+        "anticipation_m": 0
       },
       "type": "emotional",
-      "name": "happy",
+      "level": 0
+    },
+    "annoyed": {
+      "name": "annoyed",
+      "modifiers": {
+        "fear_m": 0,
+        "anger_m": 0.5,
+        "sadness_m": 0,
+        "joy_m": -0.5,
+        "disgust_m": 0,
+        "surprise_m": 0,
+        "trust_m": -0.2,
+        "anticipation_m": 0.2
+      },
+      "type": "emotional",
+      "level": 0
+    },
+    "bored": {
+      "name": "bored",
+      "modifiers": {
+        "fear_m": 1,
+        "anger_m": 1,
+        "sadness_m": 1,
+        "joy_m": 1,
+        "disgust_m": 1,
+        "surprise_m": 1,
+        "trust_m": 1,
+        "anticipation_m": 1
+      },
+      "type": "emotional",
+      "level": 4.5
+    },
+    "tired": {
+      "name": "tired",
+      "modifiers": {
+        "fear_m": 0,
+        "anger_m": 0.2,
+        "sadness_m": 0,
+        "joy_m": -1,
+        "disgust_m": 0,
+        "surprise_m": 0,
+        "trust_m": 0.2,
+        "anticipation_m": 0
+      },
+      "type": "physical",
+      "level": 0
+    },
+    "hungry": {
+      "name": "hungry",
+      "modifiers": {
+        "fear_m": 0,
+        "anger_m": 0.5,
+        "sadness_m": 0,
+        "joy_m": -0.5,
+        "disgust_m": 0,
+        "surprise_m": 0,
+        "trust_m": 0.5,
+        "anticipation_m": 0
+      },
+      "type": "physical",
+      "level": 0
+    },
+    "pain": {
+      "name": "pain",
+      "modifiers": {
+        "fear_m": 0.2,
+        "anger_m": 0.5,
+        "sadness_m": 0,
+        "joy_m": -1,
+        "disgust_m": 0,
+        "surprise_m": 0,
+        "trust_m": -1,
+        "anticipation_m": 1
+      },
+      "type": "physical",
+      "level": 0
+    },
+    "sick": {
+      "name": "sick",
+      "modifiers": {
+        "fear_m": 0.2,
+        "anger_m": 0,
+        "sadness_m": 1,
+        "joy_m": -1,
+        "disgust_m": 0,
+        "surprise_m": 0,
+        "trust_m": 0,
+        "anticipation_m": 0.5
+      },
+      "type": "physical",
       "level": 0
     }
   }
