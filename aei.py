@@ -46,13 +46,15 @@ class aei:
             self.states = {}
             for state in self.state_dict:
                 state_value = self.state_dict[state]
-                self.states[state] = states_obj.states_obj( # s[state] sets a dictionaty item with a key of state
-                    state_value['name'],
-                    state_value['modifiers'],
-                    state_value['type']
-                )
+                self.states[state] = {
+                    'name': state_value['name'],
+                    'modifiers': state_value['modifiers'],
+                    'type': state_value['type'],
+                    'level':0
+                }
             with open(self.save_file, 'w') as f:
                 self_data = json.dumps(self, default = self.jdefault, indent = 2)
+                #TODO do i need to write to f here?
         # If a previous save does exist, load data from file
         else:
             print('Loading: %s'%(self.name))
@@ -62,6 +64,7 @@ class aei:
                 self.emotions = self_data['emotions']
                 self.e_mods = self_data['e_mods']
                 self.states = self_data['states']
+
     # Datatype returner for json.dump
     def jdefault(self, o):
         if isinstance(o, datetime.datetime):
@@ -77,6 +80,9 @@ class aei:
             f.write(self_data)
     # Method for modifying a state in an AEI obj
     def change_state(self, state, value):
+        self.states[state]['level'] += value
+        for modifier in self.e_mods:
+            self.e_mods[modifier] += self.states[state]['modifiers'][modifier]*value
         try:
             self.states[state]['level'] += value
             for modifier in self.e_mods:
