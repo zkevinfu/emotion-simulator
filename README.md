@@ -28,7 +28,10 @@ Theres a command line for handling input, which is nice
 **--TODO--**  
 Add stimuli processing capabilities  
 Add a GUI  
-Figure out what stimuli are worth working with  
+Figure out what stimuli are worth working with 
+Add interactivity: hunger, interaction 
+Change states based off of emotion level 
+
 
 **--FUTURE--**  
 Machine learning for calculating modifier values?  
